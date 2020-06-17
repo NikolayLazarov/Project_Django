@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>Movies site</title>
+		<link rel="stylesheet" type = "text/css" href="{% static 'first_app/style.css' %}">
+		<style>
+		h1{
+			text-align: left;
+		}
+    img {
+      float: left;
+    }
+
+		</style>
+	</head>
+
+	<body>
+		
+			
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/tvshows/">Tv shows</a></li>
+				<li><a href="/movies/">Movies</a></li>
+				<li><a href="/videogames/">Video games</a></li>
+			</ul>
+		</nav>
+			
+		 <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+	</body>
+
+</html>
